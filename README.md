@@ -1,8 +1,7 @@
 ## Abstract
 
 This repo contains a project about classifying names, given a text of names from an upstream system we build a classifier to correctly classify content of names. 
-The analysis and model building of this problem give us good results for provided dataset. I anticipate that with big data, the model will begin to learn some noise,
-hence, we can always resort to adjacent methods to Naive Bayes such as generative model. It will be interesting to deploy restricted Boltzmann machine in production.
+The analysis and model building of this problem give us good results for provided dataset. I anticipate that with big data, the model will begin to learn some noise. It will be interesting to deploy restricted Boltzmann machine in production. 
 I have followed the MLOps practice from loading the data to deploying the model with docker containers.
 
 
