@@ -98,69 +98,6 @@ plt.show()
 # Data prepreocessing
 #################################################################################################################################
 
-# Make the letters lower case and tokenize the words
-tokenized_names = df['dirty_name'].str.lower().apply(word_tokenize)
-
-# Print the tokens to see how it looks like
-print(tokenized_names)
-
-# Define a function to returns only alphanumeric tokens
-def alpha(tokens):
-    """This function removes all non-alphanumeric characters"""
-    alpha = []
-    for token in tokens:
-        if str.isalpha(token) or token in ['n\'t','won\'t']:
-            if token=='n\'t':
-                alpha.append('not')
-                continue
-            elif token == 'won\'t':
-                alpha.append('wont')
-                continue
-            alpha.append(token)
-    return alpha
-
-# Apply our function to tokens
-tokenized_names = tokenized_names.apply(alpha)
-
-print(tokenized_names)
-
-# Define a function to remove stop words
-def remove_stop_words(tokens):
-    """This function removes all stop words in terms of nltk stopwords"""
-    no_stop = []
-    for token in tokens:
-        if token not in stopwords.words('english'):
-            no_stop.append(token)
-    return no_stop
-
-# Apply our function to tokens
-tokenized_names = tokenized_names.apply(remove_stop_words)
-
-print(tokenized_names)
-
-# Define a function to lemmatization
-def lemmatize(tokens):
-    """This function lemmatize the names"""
-    # Initialize the WordNetLemmatizer
-    lemmatizer = WordNetLemmatizer()
-    # Create the lemmatized list
-    lemmatized = []
-    for token in tokens:
-            # Lemmatize and append
-            lemmatized.append(lemmatizer.lemmatize(token))
-    return " ".join(lemmatized)
-
-# Apply our function to tokens
-tokenized_names = tokenized_names.apply(lemmatize)
-
-print(tokenized_names)
-
-# Replace the columns with tokenized messages
-df['dirty_name'] = tokenized_names
-
-# Display the first five rows
-display(df.head())
-
 # create a function to count words
 def word_count_fun(dictionary):
     list_vec = list(dictionary.keys())
