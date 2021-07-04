@@ -10,7 +10,7 @@ model = pickle.load(open('Naive_Bayes_Classifier.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['POST', 'GET'])
 def predict():
     '''
     For rendering results on HTML GUI
