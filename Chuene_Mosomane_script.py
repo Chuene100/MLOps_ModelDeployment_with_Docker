@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import numpy as np
+from collections import Counter
 
 # Multinomial Naive Bayes Classifier
 from sklearn.naive_bayes import MultinomialNB
@@ -22,6 +23,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 from sklearn.metrics import roc_curve, auc
 from sklearn.metrics import roc_auc_score
+
 #################################################################################################################################
 # Load data
 df = pd.read_csv('names_data_candidate.csv')
@@ -220,4 +222,4 @@ file = open('Naive_Bayes_Classifier.pkl', 'wb')
 pickle.dump(model_naive_bayes, file)
 
 # Load the model
-model = pickle.load(open('Naive_Bayes_Classifier.pkl', 'rb'))
+#model = pickle.load(open('Naive_Bayes_Classifier.pkl', 'rb'))
