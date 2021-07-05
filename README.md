@@ -26,11 +26,12 @@ I have followed the MLOps practice from loading the data to deploying the model 
 * How would you deploy this solution in real life (you can assume anything you want to simplify the analysis, but state these assumptions).
 
 # Run the project
+* run pip install -r requirements.txt
 ## Script
-* python Chuene_Mosomane_script.py
+* run python Chuene_Mosomane_script.py
 
 ## Flask App
-* python app.py
+* run python app.py
 
 ## Docker image
-* docker build .
+* run docker build .
