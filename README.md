@@ -28,4 +28,8 @@ I have followed the MLOps practice from loading the data to deploying the model 
 ## Run the project
 python Chuene_Mosomane_script.py
 
+## Flask App
+python app.py
+
 ## Docker image
+docker build .
