@@ -25,12 +25,12 @@ I have followed the MLOps practice from loading the data to deploying the model 
 * What is the potential issue with your system, and how would you resolve it?
 * How would you deploy this solution in real life (you can assume anything you want to simplify the analysis, but state these assumptions).
 
-## Run the project
-# Script
+# Run the project
+## Script
 * python Chuene_Mosomane_script.py
 
-# Flask App
+## Flask App
 * python app.py
 
-# Docker image
+## Docker image
 * docker build .
